@@ -1,0 +1,45 @@
+.login-and-register {
+    width: 20.8%;
+    padding-left: 0;
+
+    .layout {
+        margin-left: 0;
+    }
+
+    .layout__item {
+        padding-left: 0;
+        width: 50%;
+        display: block;
+        float: left;
+    }
+
+    &__btn {
+        padding: 2px 22px;
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    &__login-btn {
+        border: 1px solid #f5f5f5;
+        color: #fff;
+        margin-left: 10px;
+        transition: color .3s ease-out, opacity .3s ease-out, background .3s ease-out;
+
+        &:hover {
+            color: #333 !important;
+            background-color: #f5f5f5;
+        }
+    }
+
+    &__register-btn {
+        border: 1px solid #f5f5f5;
+        color: #333;
+        background-color: #f5f5f5;
+        transition: color .3s ease-out, opacity .3s ease-out, background .3s ease-out;
+
+        &:hover {
+            color: salmon !important;
+        }
+    }
+}

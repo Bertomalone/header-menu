@@ -1,0 +1,26 @@
+.logo-and-category {
+    width: 12% !important;
+}
+
+.brand {
+
+    &--logo {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        font-weight: normal;
+        line-height: 1;
+        display: inline-block;
+    }
+
+    &__link {
+        display: block;
+        width: 90px;
+        height: 40px;
+        text-indent: -99999px;
+        background-image: url('../../../../images/logo/meetup-logo.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: -25px;
+    }
+}
