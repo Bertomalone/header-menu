@@ -1,6 +1,10 @@
 .status-shoping_char-login_register {
     width: 88% !important;
 
+    @media only screen and (max-width: 530px) {
+        display: none;
+    }
+
     @import 'navbar-menu';
     @import 'login-and-register';
 }

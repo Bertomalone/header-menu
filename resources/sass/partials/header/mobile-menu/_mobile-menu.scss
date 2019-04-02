@@ -1,0 +1,215 @@
+.hamburger-menu {
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @media only screen and (min-width: 531px) {
+        display: none;
+    }
+
+    &::before, &__middle, &::after {
+        background-color: #fff;
+        border-radius: 3px;
+        height: 3px;
+        position: absolute;
+        width: 100%;
+    }
+
+    &::before, &::after {
+        content: '';
+        left: 0;
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &__middle {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &::after {
+        bottom: 0;
+    }
+}
+
+.menu-mobile {
+    border-radius: 4px;
+    left: -110%;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transition: left 0.3s ease-in-out, transform 0.3s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    will-change: transform, opacity;
+
+    &--open {
+        left: 0;
+        pointer-events: auto;
+        transform: none;
+    }
+
+    @media only screen and (min-width: 531px) {
+        display: none;
+    }
+
+    &__wrapper {
+        width: 92.5%;
+        background: salmon;
+        float: left;
+        border-bottom: 1px solid #fff;
+        height: 100vh;
+    }
+
+    &__brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__close-btn {
+        font-size: 0;
+        height: 40px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40px;
+        height: 100vh;
+        background: rgba(0,0,0,.45);
+        transition: left 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &::after, &::before {
+            background: #fff;
+            border-radius: 3px;
+            content: '';
+            height: 3px;
+            position: absolute;
+            left: 50%;
+            top: 5%;
+            width: 24px;
+        }
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &::before {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &--close {
+            left: -110%;
+            transform: none;
+        }
+    }
+
+    &__list {
+        margin-top: 65px;
+    }
+
+    &__item {
+        color: #fff;
+        display: block;
+        font-size: 18px;
+        padding: 12px 24px;
+        text-decoration: none;
+        font-weight: 700;
+        border-bottom: 2px solid #fff;
+
+        &:first-child {
+            border-top: 1px solid #fff;
+        }
+
+        &:hover {
+            background: rgba(51,51,51, .25);
+            color: #ffffff;
+        }
+    }
+
+    &__dropdown {
+        position: relative;
+        height: 52px;
+        transition: height .3s ease-out;
+
+        &--height-down {
+            height: 258px;
+        }
+        // height: 204px;
+
+        &__item {
+            border-top: none !important;
+            position: relative;
+        }
+
+        &__icon {
+            position: absolute;
+            width: 24px;
+            right: 2%;
+            top: 50%;
+            transform: translate(-2%, -50%);
+
+            &::before, &::after {
+                content: "";
+                background-color: #fff;
+                border-radius: 3px;
+                height: 3px;
+                position: absolute;
+                width: 100%;
+            }
+
+            &::after {
+                transform: translate(10%, -50%) rotate(-50deg);
+            }
+
+            &::before {
+                transform: translate(-50%, -50%) rotate(50deg);
+            }
+        }
+
+        &__list {
+            background: rgb(238, 129, 117);
+            position: absolute;
+            right: 0;
+            top: 54px;
+            margin-bottom: 0;
+            width: 100%;
+            display: none;
+            transition: top .3s ease-out, display .3s ease-out;
+
+            &--down-list {
+                display: block;
+            }
+        }
+
+        &__sub-item {
+            color: #fff;
+            display: block;
+            font-size: 16px;
+            padding: 12px 24px;
+            padding-left: 40px;
+            text-decoration: none;
+            border-bottom: 2px solid #fff;
+        }
+
+        &__link {
+            color: #fff;
+            text-decoration: none;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
